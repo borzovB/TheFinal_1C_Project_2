@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ДатаПоездки" id="7">
+			<DataPath>Объект.ДатаПоездки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаПоездкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаПоездкиРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="ПоездкаНачалась" id="10">
+			<DataPath>Объект.ПоездкаНачалась</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоездкаНачаласьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПоездкаНачаласьРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПоездкаЗавершена" id="13">
+			<DataPath>Объект.ПоездкаЗавершена</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоездкаЗавершенаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПоездкаЗавершенаРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<InputField name="Маршрут" id="16">
+			<DataPath>Объект.Маршрут</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="МаршрутКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="МаршрутРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="КоличествоМест" id="19">
+			<DataPath>Объект.КоличествоМест</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоМестКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КоличествоМестРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="КоличествоЗанятыхМест" id="22">
+			<DataPath>Объект.КоличествоЗанятыхМест</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КоличествоЗанятыхМестКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КоличествоЗанятыхМестРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Водитель" id="25">
+			<DataPath>Объект.Водитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВодительКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ВодительРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="ГруппаМаршрутПоездки" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут поездки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаМаршрутПоездкиРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="МаршрутПоездки" id="32">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.МаршрутПоездки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МаршрутПоездкиКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="МаршрутПоездкиКоманднаяПанель" id="34"/>
+							<ExtendedTooltip name="МаршрутПоездкиРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="МаршрутПоездкиСтрокаПоиска" id="36">
+								<AdditionSource>
+									<Item>МаршрутПоездки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МаршрутПоездкиСтрокаПоискаКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="МаршрутПоездкиСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МаршрутПоездкиСостояниеПросмотра" id="39">
+								<AdditionSource>
+									<Item>МаршрутПоездки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МаршрутПоездкиСостояниеПросмотраКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="МаршрутПоездкиСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МаршрутПоездкиУправлениеПоиском" id="42">
+								<AdditionSource>
+									<Item>МаршрутПоездки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МаршрутПоездкиУправлениеПоискомКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="МаршрутПоездкиУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="МаршрутПоездкиНомерСтроки" id="45">
+									<DataPath>Объект.МаршрутПоездки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МаршрутПоездкиНомерСтрокиКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="МаршрутПоездкиНомерСтрокиРасширеннаяПодсказка" id="47"/>
+								</LabelField>
+								<InputField name="МаршрутПоездкиОстановка" id="48">
+									<DataPath>Объект.МаршрутПоездки.Остановка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="МаршрутПоездкиОстановкаКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="МаршрутПоездкиОстановкаРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<InputField name="МаршрутПоездкиАдрес" id="51">
+									<DataPath>Объект.МаршрутПоездки.Адрес</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="МаршрутПоездкиАдресКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="МаршрутПоездкиАдресРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="МаршрутПоездкиВремя" id="54">
+									<DataPath>Объект.МаршрутПоездки.Время</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="МаршрутПоездкиВремяКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="МаршрутПоездкиВремяРасширеннаяПодсказка" id="56"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗабронированныеМеста" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Забронированные места</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЗабронированныеМестаРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<Table name="ЗабронированныеМеста" id="59">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЗабронированныеМеста</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗабронированныеМестаКонтекстноеМеню" id="60"/>
+							<AutoCommandBar name="ЗабронированныеМестаКоманднаяПанель" id="61"/>
+							<ExtendedTooltip name="ЗабронированныеМестаРасширеннаяПодсказка" id="62"/>
+							<SearchStringAddition name="ЗабронированныеМестаСтрокаПоиска" id="63">
+								<AdditionSource>
+									<Item>ЗабронированныеМеста</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗабронированныеМестаСтрокаПоискаКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ЗабронированныеМестаСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗабронированныеМестаСостояниеПросмотра" id="66">
+								<AdditionSource>
+									<Item>ЗабронированныеМеста</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗабронированныеМестаСостояниеПросмотраКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ЗабронированныеМестаСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗабронированныеМестаУправлениеПоиском" id="69">
+								<AdditionSource>
+									<Item>ЗабронированныеМеста</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗабронированныеМестаУправлениеПоискомКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ЗабронированныеМестаУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗабронированныеМестаНомерСтроки" id="72">
+									<DataPath>Объект.ЗабронированныеМеста.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗабронированныеМестаНомерСтрокиКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ЗабронированныеМестаНомерСтрокиРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<InputField name="ЗабронированныеМестаПассажир" id="75">
+									<DataPath>Объект.ЗабронированныеМеста.Пассажир</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЗабронированныеМестаПассажирКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ЗабронированныеМестаПассажирРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="ЗабронированныеМестаОстановкаПосадки" id="78">
+									<DataPath>Объект.ЗабронированныеМеста.ОстановкаПосадки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЗабронированныеМестаОстановкаПосадкиКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ЗабронированныеМестаОстановкаПосадкиРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="ЗабронированныеМестаОстановкаВысадки" id="87">
+									<DataPath>Объект.ЗабронированныеМеста.ОстановкаВысадки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЗабронированныеМестаОстановкаВысадкиКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ЗабронированныеМестаОстановкаВысадкиРасширеннаяПодсказка" id="89"/>
+								</InputField>
+								<CheckBoxField name="ЗабронированныеМестаБроньОтменена" id="81">
+									<DataPath>Объект.ЗабронированныеМеста.БроньОтменена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗабронированныеМестаБроньОтмененаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ЗабронированныеМестаБроньОтмененаРасширеннаяПодсказка" id="83"/>
+								</CheckBoxField>
+								<InputField name="ЗабронированныеМестаПричинаОтмены" id="84">
+									<DataPath>Объект.ЗабронированныеМеста.ПричинаОтмены</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ЗабронированныеМестаПричинаОтменыКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ЗабронированныеМестаПричинаОтменыРасширеннаяПодсказка" id="86"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Поездка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

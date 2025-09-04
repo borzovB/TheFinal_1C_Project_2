@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ОстановочныеПункты" id="7">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>1/0:83a0af77-2415-4c5b-9325-f6b1d0561b3a</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОстановочныеПунктыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ОстановочныеПунктыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ОстановочныеПунктыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ОстановочныеПунктыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ОстановочныеПункты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОстановочныеПунктыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ОстановочныеПунктыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОстановочныеПунктыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ОстановочныеПункты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОстановочныеПунктыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ОстановочныеПунктыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОстановочныеПунктыУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ОстановочныеПункты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОстановочныеПунктыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ОстановочныеПунктыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="2ccfdec5-583d-4eca-8319-e55de492665a">ОстановочныеПунктыПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ОстановочныеПунктыНомерСтроки" id="20">
+					<DataPath>1/0:83a0af77-2415-4c5b-9325-f6b1d0561b3a/-2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОстановочныеПунктыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОстановочныеПунктыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ОстановочныеПунктыОстановка" id="23">
+					<DataPath>1/0:83a0af77-2415-4c5b-9325-f6b1d0561b3a/0:e126b9df-376e-4125-a0cb-0da7349a6ac1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОстановочныеПунктыОстановкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОстановочныеПунктыОстановкаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ОстановочныеПунктыАдрес" id="26">
+					<DataPath>1/0:83a0af77-2415-4c5b-9325-f6b1d0561b3a/0:7f152051-f580-4784-80ad-0476b7c9fa43</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ОстановочныеПунктыАдресКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ОстановочныеПунктыАдресРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Маршруты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

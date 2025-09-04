@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОсновныеСведения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные сведения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные сведения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ОсновныеСведенияРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="ДатаПоездки" id="15">
+					<DataPath>ДатаПоездки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаПоездкиКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДатаПоездкиРасширеннаяПодсказка" id="17"/>
+				</InputField>
+				<InputField name="Поездка" id="9">
+					<DataPath>Поездка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПоездкаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ПоездкаРасширеннаяПодсказка" id="11"/>
+				</InputField>
+				<InputField name="СтатусПоездки" id="43">
+					<DataPath>СтатусПоездки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СтатусПоездкиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СтатусПоездкиРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="СвободныеМеста" id="12">
+					<DataPath>СвободныеМеста</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="СвободныеМестаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="СвободныеМестаРасширеннаяПодсказка" id="14"/>
+				</InputField>
+				<Table name="МаршрутПоездки" id="18">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>МаршрутПоездки</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="МаршрутПоездкиКонтекстноеМеню" id="19"/>
+					<AutoCommandBar name="МаршрутПоездкиКоманднаяПанель" id="20"/>
+					<ExtendedTooltip name="МаршрутПоездкиРасширеннаяПодсказка" id="21"/>
+					<SearchStringAddition name="МаршрутПоездкиСтрокаПоиска" id="22">
+						<AdditionSource>
+							<Item>МаршрутПоездки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МаршрутПоездкиСтрокаПоискаКонтекстноеМеню" id="23"/>
+						<ExtendedTooltip name="МаршрутПоездкиСтрокаПоискаРасширеннаяПодсказка" id="24"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МаршрутПоездкиСостояниеПросмотра" id="25">
+						<AdditionSource>
+							<Item>МаршрутПоездки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МаршрутПоездкиСостояниеПросмотраКонтекстноеМеню" id="26"/>
+						<ExtendedTooltip name="МаршрутПоездкиСостояниеПросмотраРасширеннаяПодсказка" id="27"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МаршрутПоездкиУправлениеПоиском" id="28">
+						<AdditionSource>
+							<Item>МаршрутПоездки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МаршрутПоездкиУправлениеПоискомКонтекстноеМеню" id="29"/>
+						<ExtendedTooltip name="МаршрутПоездкиУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="МаршрутПоездкиНаименование" id="31">
+							<DataPath>МаршрутПоездки.Наименование</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МаршрутПоездкиНаименованиеКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="МаршрутПоездкиНаименованиеРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="МаршрутПоездкиАдрес" id="34">
+							<DataPath>МаршрутПоездки.Адрес</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МаршрутПоездкиАдресКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="МаршрутПоездкиАдресРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="МаршрутПоездкиВремя" id="37">
+							<DataPath>МаршрутПоездки.Время</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МаршрутПоездкиВремяКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="МаршрутПоездкиВремяРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<InputField name="МаршрутПоездкиОстановка" id="40">
+							<DataPath>МаршрутПоездки.Остановка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="МаршрутПоездкиОстановкаКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="МаршрутПоездкиОстановкаРасширеннаяПодсказка" id="42"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ПоказатьМаршрут" id="5">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьМаршрут</CommandName>
+			<ExtendedTooltip name="ПоказатьМаршрутРасширеннаяПодсказка" id="6"/>
+		</Button>
+		<Button name="ПоказатьМаршрутДоОстановки" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьМаршрутДоОстановки</CommandName>
+			<ExtendedTooltip name="ПоказатьМаршрутДоОстановкиРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="ПоказатьНаКартеПоследнееМесто" id="46">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьНаКартеПоследнееМесто</CommandName>
+			<ExtendedTooltip name="ПоказатьНаКартеПоследнееМестоРасширеннаяПодсказка" id="47"/>
+		</Button>
+		<Button name="ОтобразитьМаршрут" id="48">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОтобразитьМаршрут</CommandName>
+			<ExtendedTooltip name="ОтобразитьМаршрутРасширеннаяПодсказка" id="49"/>
+		</Button>
+		<Button name="СоздатьНапоминаниеНажатие" id="52">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СоздатьНапоминаниеНажатие</CommandName>
+			<ExtendedTooltip name="СоздатьНапоминаниеНажатиеРасширеннаяПодсказка" id="53"/>
+		</Button>
+		<Button name="ОтменитьПоездку" id="50">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОтменитьПоездку</CommandName>
+			<ExtendedTooltip name="ОтменитьПоездкуРасширеннаяПодсказка" id="51"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДатаПоездки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата поездки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаршрутПоездки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрут поездки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Адрес" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Адреса</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Время" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Остановка" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остановка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Поездка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поездка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Поездка</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СвободныеМеста" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свободные места</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПользователь" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатусПоездки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус поездки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Статус" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьМаршрут" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршрут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршрут</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМаршрут</Action>
+		</Command>
+		<Command name="ПоказатьМаршрутДоОстановки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршрут до остановки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршрут до остановки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМаршрутДоОстановки</Action>
+		</Command>
+		<Command name="ПоказатьНаКартеПоследнееМесто" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте последнее место</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте последнее место</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьНаКартеПоследнееМесто</Action>
+		</Command>
+		<Command name="ОтобразитьМаршрут" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить маршрут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить маршрут</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтобразитьМаршрут</Action>
+		</Command>
+		<Command name="ОтменитьПоездку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить поездку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьПоездку</Action>
+		</Command>
+		<Command name="СоздатьНапоминаниеНажатие" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать напоминание нажатие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать напоминание нажатие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНапоминаниеНажатие</Action>
+		</Command>
+	</Commands>
+</Form>

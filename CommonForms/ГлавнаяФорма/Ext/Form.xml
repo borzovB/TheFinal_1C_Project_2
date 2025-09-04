@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьПриветствие" id="8">
+			<Width>38</Width>
+			<Height>1</Height>
+			<ContextMenu name="НадписьПриветствиеКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="НадписьПриветствиеРасширеннаяПодсказка" id="10"/>
+		</LabelDecoration>
+		<LabelDecoration name="НадписьРоль" id="11">
+			<Width>38</Width>
+			<Height>1</Height>
+			<ContextMenu name="НадписьРольКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="НадписьРольРасширеннаяПодсказка" id="13"/>
+		</LabelDecoration>
+		<LabelDecoration name="НадписьДатаВремя" id="5" DisplayImportance="VeryHigh">
+			<Width>38</Width>
+			<Height>1</Height>
+			<ContextMenu name="НадписьДатаВремяКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НадписьДатаВремяРасширеннаяПодсказка" id="7"/>
+		</LabelDecoration>
+		<InputField name="ДатаВыбора" id="14">
+			<DataPath>ДатаВыбора</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВыбораКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ДатаВыбораРасширеннаяПодсказка" id="16"/>
+			<Events>
+				<Event name="OnChange">ДатаВыбораПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="ЗаписанныеПоездки" id="59">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ЗаписанныеПоездки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗаписанныеПоездкиКонтекстноеМеню" id="60"/>
+			<AutoCommandBar name="ЗаписанныеПоездкиКоманднаяПанель" id="61"/>
+			<ExtendedTooltip name="ЗаписанныеПоездкиРасширеннаяПодсказка" id="62"/>
+			<SearchStringAddition name="ЗаписанныеПоездкиСтрокаПоиска" id="63">
+				<AdditionSource>
+					<Item>ЗаписанныеПоездки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаписанныеПоездкиСтрокаПоискаКонтекстноеМеню" id="64"/>
+				<ExtendedTooltip name="ЗаписанныеПоездкиСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаписанныеПоездкиСостояниеПросмотра" id="66">
+				<AdditionSource>
+					<Item>ЗаписанныеПоездки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаписанныеПоездкиСостояниеПросмотраКонтекстноеМеню" id="67"/>
+				<ExtendedTooltip name="ЗаписанныеПоездкиСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаписанныеПоездкиУправлениеПоиском" id="69">
+				<AdditionSource>
+					<Item>ЗаписанныеПоездки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаписанныеПоездкиУправлениеПоискомКонтекстноеМеню" id="70"/>
+				<ExtendedTooltip name="ЗаписанныеПоездкиУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ЗаписанныеПоездкиНомерПоездки" id="72">
+					<DataPath>ЗаписанныеПоездки.Поездка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗаписанныеПоездкиНомерПоездкиКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ЗаписанныеПоездкиНомерПоездкиРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="ЗаписанныеПоездкиСтатус" id="81">
+					<DataPath>ЗаписанныеПоездки.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗаписанныеПоездкиСтатусКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ЗаписанныеПоездкиСтатусРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="ЗаписанныеПоездкиНачальнаяТочка" id="75">
+					<DataPath>ЗаписанныеПоездки.НачальнаяТочка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗаписанныеПоездкиНачальнаяТочкаКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ЗаписанныеПоездкиНачальнаяТочкаРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="ЗаписанныеПоездкиКонечнаяТочка" id="78">
+					<DataPath>ЗаписанныеПоездки.КонечнаяТочка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ЗаписанныеПоездкиКонечнаяТочкаКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="ЗаписанныеПоездкиКонечнаяТочкаРасширеннаяПодсказка" id="80"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ТаблицаПоездок" id="17">
+			<Representation>List</Representation>
+			<SelectionMode>SingleRow</SelectionMode>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаПоездок</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица поездок</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаПоездокКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ТаблицаПоездокКоманднаяПанель" id="19"/>
+			<ExtendedTooltip name="ТаблицаПоездокРасширеннаяПодсказка" id="20"/>
+			<SearchStringAddition name="ТаблицаПоездокСтрокаПоиска" id="21">
+				<AdditionSource>
+					<Item>ТаблицаПоездок</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПоездокСтрокаПоискаКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ТаблицаПоездокСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаПоездокСостояниеПросмотра" id="24">
+				<AdditionSource>
+					<Item>ТаблицаПоездок</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПоездокСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ТаблицаПоездокСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаПоездокУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>ТаблицаПоездок</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаПоездокУправлениеПоискомКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ТаблицаПоездокУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаПоездокПоездка" id="30">
+					<DataPath>ТаблицаПоездок.Поездка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаПоездокПоездкаКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ТаблицаПоездокПоездкаРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="Creating">ТаблицаПоездокПоездкаСоздание</Event>
+					</Events>
+				</InputField>
+				<InputField name="ТаблицаПоездокСтатус" id="33">
+					<DataPath>ТаблицаПоездок.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаПоездокСтатусКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ТаблицаПоездокСтатусРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<InputField name="ТаблицаПоездокВремяНачала" id="36">
+					<DataPath>ТаблицаПоездок.ВремяНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаПоездокВремяНачалаКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТаблицаПоездокВремяНачалаРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="ТаблицаПоездокВремяОкончания" id="39">
+					<DataPath>ТаблицаПоездок.ВремяОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ТаблицаПоездокВремяОкончанияКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ТаблицаПоездокВремяОкончанияРасширеннаяПодсказка" id="41"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="НоваяДекор" id="87">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На сегодня вы не записаны ни на одну поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НоваяДекорКонтекстноеМеню" id="88"/>
+			<ExtendedTooltip name="НоваяДекорРасширеннаяПодсказка" id="89"/>
+		</LabelDecoration>
+		<LabelDecoration name="ДекорацияПоездкиПассажир" id="84">
+			<Width>37</Width>
+			<Height>1</Height>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На выбранную дату поездок нет.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияПоездкиПассажирКонтекстноеМеню" id="85"/>
+			<ExtendedTooltip name="ДекорацияПоездкиПассажирРасширеннаяПодсказка" id="86"/>
+		</LabelDecoration>
+		<Button name="ЗаписатьсяНаПоездку" id="90">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗаписатьсяНаПоездку</CommandName>
+			<ExtendedTooltip name="ЗаписатьсяНаПоездкуРасширеннаяПодсказка" id="91"/>
+		</Button>
+		<Button name="ОтменитьПоездку" id="92">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОтменитьПоездку</CommandName>
+			<ExtendedTooltip name="ОтменитьПоездкуРасширеннаяПодсказка" id="93"/>
+		</Button>
+		<Button name="КнопкаОткрытьПоездкуНажатие" id="53">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КнопкаОткрытьПоездкуНажатие</CommandName>
+			<ExtendedTooltip name="КнопкаОткрытьПоездкуНажатиеРасширеннаяПодсказка" id="54"/>
+		</Button>
+		<Button name="КнопкаНачатьПоездку" id="45">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КнопкаНачатьПоездку</CommandName>
+			<ExtendedTooltip name="КнопкаНачатьПоездкуРасширеннаяПодсказка" id="46"/>
+		</Button>
+		<Button name="КнопкаЗавершитьПоездкуНажатие" id="47">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КнопкаЗавершитьПоездкуНажатие</CommandName>
+			<ExtendedTooltip name="КнопкаЗавершитьПоездкуНажатиеРасширеннаяПодсказка" id="48"/>
+		</Button>
+		<Button name="ПоказатьМоёМестоположение" id="51">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьМоёМестоположение</CommandName>
+			<ExtendedTooltip name="ПоказатьМоёМестоположениеРасширеннаяПодсказка" id="52"/>
+		</Button>
+		<Button name="ВернутьсяВПанельВхода" id="3">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ВернутьсяВПанельВхода</CommandName>
+			<ExtendedTooltip name="ВернутьсяВПанельВходаРасширеннаяПодсказка" id="4"/>
+		</Button>
+		<Button name="ПоказатьМаршрут" id="55">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьМаршрут</CommandName>
+			<ExtendedTooltip name="ПоказатьМаршрутРасширеннаяПодсказка" id="56"/>
+		</Button>
+		<Button name="ПоказатьНаКартеПоследнееМесто" id="94">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьНаКартеПоследнееМесто</CommandName>
+			<ExtendedTooltip name="ПоказатьНаКартеПоследнееМестоРасширеннаяПодсказка" id="95"/>
+		</Button>
+		<Button name="РасширеннаяИнформация" id="98">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.РасширеннаяИнформация</CommandName>
+			<ExtendedTooltip name="РасширеннаяИнформацияРасширеннаяПодсказка" id="99"/>
+		</Button>
+		<Button name="ОтобразитьМаршрут" id="96">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОтобразитьМаршрут</CommandName>
+			<ExtendedTooltip name="ОтобразитьМаршрутРасширеннаяПодсказка" id="97"/>
+		</Button>
+		<Button name="СоздатьНапоминаниеНажатие" id="100">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СоздатьНапоминаниеНажатие</CommandName>
+			<ExtendedTooltip name="СоздатьНапоминаниеНажатиеРасширеннаяПодсказка" id="101"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДатаВыбора" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПользователь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаПоездок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица поездок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Поездка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поездка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.Поездка</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяНачала" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время начала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяОкончания" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время окончания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗаписанныеПоездки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записанные поездки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Поездка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поездка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.Поездка</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НачальнаяТочка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начальная точка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КонечнаяТочка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конечная точка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>500</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПользовательРоль" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь роль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаПоездок</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаПоездок.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">В пути</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаПоездок</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаПоездок.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Поездка завершена</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗаписанныеПоездки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗаписанныеПоездки.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Поездка завершена</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗаписанныеПоездки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ЗаписанныеПоездки.Статус</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">В пути</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьМоёМестоположение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать моё местоположение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать моё местоположение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМоёМестоположение</Action>
+		</Command>
+		<Command name="ВернутьсяВПанельВхода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться в панель входа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться в панель входа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВернутьсяВПанельВхода</Action>
+		</Command>
+		<Command name="КнопкаНачатьПоездку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка начать поездку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаНачатьПоездкуНажатие</Action>
+		</Command>
+		<Command name="КнопкаНачатьПоездкуНажатие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начать поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка начать поездку нажатие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаНачатьПоездкуНажатие</Action>
+		</Command>
+		<Command name="КнопкаЗавершитьПоездкуНажатие" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка завершить поездку нажатие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаЗавершитьПоездкуНажатие</Action>
+		</Command>
+		<Command name="КнопкаОткрытьПоездкуНажатие" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка открыть поездку нажатие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаОткрытьПоездкуНажатие</Action>
+		</Command>
+		<Command name="ПоказатьМаршрут" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршрут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршрут</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМаршрут</Action>
+		</Command>
+		<Command name="ЗаписатьсяНаПоездку" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записаться на поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записаться на поездку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьсяНаПоездку</Action>
+		</Command>
+		<Command name="ОтменитьПоездку" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить поездку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить поездку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьПоездку</Action>
+		</Command>
+		<Command name="ПоказатьНаКартеПоследнееМесто" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте последнее место</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте последнее место</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьНаКартеПоследнееМесто</Action>
+		</Command>
+		<Command name="ОтобразитьМаршрут" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить маршрут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобразить маршрут</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтобразитьМаршрут</Action>
+		</Command>
+		<Command name="РасширеннаяИнформация" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширенная информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширенная информация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасширеннаяИнформация</Action>
+		</Command>
+		<Command name="СоздатьНапоминаниеНажатие" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать напоминание нажатие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать напоминание нажатие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьНапоминаниеНажатие</Action>
+		</Command>
+	</Commands>
+</Form>
